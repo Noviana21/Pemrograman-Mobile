@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/toolBarText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:backgroundTint="#547792"
+        android:fontFamily="sans-serif"
+        android:paddingTop="20dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Tip Time"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBarText"
+        android:hint="Cost of Service"
+        android:textColorHint="#aaa7ad"
+        />
+
+    <TextView
+        android:id="@+id/pertanyaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How was the service? "
+        android:textColor="#808080"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_text" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/pertanyaan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        android:layout_marginTop="5dp"
+        >
+
+        <RadioButton
+            android:id="@+id/amazing_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amazing (20%)"
+            app:buttonTint="@drawable/radio_button_selector"/>
+
+        <RadioButton
+            android:id="@+id/good_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good (18%)"
+            app:buttonTint="@drawable/radio_button_selector"/>
+
+        <RadioButton
+            android:id="@+id/okay_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Okay (15%)"
+            app:buttonTint="@drawable/radio_button_selector"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/round_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round up tip? "
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group"
+        />
+
+    <Switch
+        android:id="@+id/switch_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/round_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/round_up"
+        app:thumbTint="#eeeeee"
+        app:trackTint="#547792"
+        />
+
+    <android.widget.Button
+        android:id="@+id/calculate_button"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_round"
+        android:text="Calculate"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/tip_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="apa saja brok "
+        android:layout_marginTop="5dp"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_button"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
